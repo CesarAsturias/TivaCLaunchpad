@@ -27,6 +27,7 @@ SECTIONS
 	.data : AT(ADDR(.text) + SIZEOF(.text))
 	{
 		_data = .;
+		_ldata = LOADADDR (.data);
 		*(vtable)
 		*(.data*)
 		_edata = .;
