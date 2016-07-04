@@ -40,14 +40,14 @@ int main(void)
 	// Loop
 	while(1)
 	{
-		In = ROM_GPIOPinRead(BUTTONS_GPIO_BASE, RIGHT_BUTTON); // Read PORTF 0
-		if (In==0){
+		//In = ROM_GPIOPinRead(BUTTONS_GPIO_BASE, RIGHT_BUTTON); // Read PORTF 0
+		//if (In==0){
 			ROM_GPIOPinWrite(GPIO_PORTF_BASE, LED_BLUE, LED_BLUE); // Turn on LED BLUE
-			ROM_GPIOPinWrite(GPIO_PORTF_BASE, LED_RED, 0);
-		}
-		else {
-			ROM_GPIOPinWrite(GPIO_PORTF_BASE, LED_RED, LED_RED); // Turn on LED RED
-			ROM_GPIOPinWrite(GPIO_PORTF_BASE, LED_BLUE, 0);
-		}
+		//	ROM_GPIOPinWrite(GPIO_PORTF_BASE, LED_RED, 0);
+		//}
+		//else {
+		//	ROM_GPIOPinWrite(GPIO_PORTF_BASE, LED_RED, LED_RED); // Turn on LED RED
+		//	ROM_GPIOPinWrite(GPIO_PORTF_BASE, LED_BLUE, 0);
+		//}
 	}
 }
