@@ -12,7 +12,7 @@ TARGET = main
 # MCU: part number to build for
 MCU = TM4C123GH6PM
 # SOURCES: list of input source sources
-SOURCES = main.c startup_gcc.c
+SOURCES = main.c startup_gcc.c buttons.c
 # INCLUDES: List of includes, by default, use includes directory
 INCLUDES = -Iincludes
 # OUTDIR: Directory to use for output
@@ -27,6 +27,7 @@ LD_SCRIPT = $(MCU).ld
 CFLAGS = -g -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp
 CFLAGS +=-Os -ffunction-sections -fdata-sections -MD -std=c99 -Wall
 CFLAGS += -pedantic -DPART_$(MCU) -c -I$(TIVAWARE_PATH)
+CFLAGS += $(INCLUDES)
 CFLAGS += -DTARGET_IS_BLIZZARD_RA1
 LDFLAGS = -T $(LD_SCRIPT) --entry ResetISR --gc-sections
 
