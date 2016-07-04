@@ -29,9 +29,8 @@ int main(void)
 	// Device configuration: PLL is used, crystal of 16 MHz, main clock is the source clock
 	// System clock divider = 4
 	//
-	ROM_SysCtlClockSet(SYSCTL_SYSDIV_4|SYSCTL_USE_PLL|SYSCTL_XTAL_16MHZ|SYSCTL_OSC_MAIN);      
-	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF); // Enable PORT F
-	
+	ROM_SysCtlClockSet(SYSCTL_SYSDIV_4|SYSCTL_USE_PLL|SYSCTL_XTAL_16MHZ|SYSCTL_OSC_MAIN);
+
 	//
 	// PF2 as output (blue led)
 	// 
