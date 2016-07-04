@@ -12,7 +12,7 @@ To compile the code just run make in 'led_control' folder and, if necessary, mod
 
 To  program the microcontroller run this from the root folder:
 ```sh
-$ make example_directory flash
+$ make argument=example_directory flash
 ```
 
 TODO: Direct access to the registers
