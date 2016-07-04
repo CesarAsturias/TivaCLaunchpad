@@ -25,3 +25,6 @@ clean:
 	     fi;			\
 	 done
 	@rm -f ${wildcard *~} __dummy__
+
+flash:
+	make -C $(argument) flash
