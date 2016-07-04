@@ -67,4 +67,7 @@ $(OUTDIR):
 clean:
 	-$(RM) $(OUTDIR)/*
 
+flash:
+	lm4flash build/main.bin
+
 .PHONY: all clean
