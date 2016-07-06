@@ -1,5 +1,5 @@
 /**
- * @file switch_led.c
+ * @file main.c
  * Control of the led using Port F
  */
 
@@ -7,21 +7,15 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#include "driverlib/rom.h"
-#include "inc/hw_memmap.h"
 #include "driverlib/gpio.h"
-#include "driverlib/sysctl.h"
-#include "inc/hw_types.h"
-#include "inc/hw_gpio.h"
-#include "inc/hw_sysctl.h"
-#include "driverlib/pin_map.h"
+
 #include "tm4c123gh6pm.h"
 
 #define LED_RED GPIO_PIN_1
 #define LED_BLUE GPIO_PIN_2
 #define LED_GREEN GPIO_PIN_3
 
-uint8_t In; // Input from PF0
+uint8_t In; // Input from PF4
 
 // Function prototype
 void PortF_Init(void);
